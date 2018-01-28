@@ -6,20 +6,20 @@ public class MakingAHundred {
     private static void printAllPossibilities(int sum, int number, int index, String str) {
 
         if (index >= NUMS.length) {
-            if (sum == number) {
+            if (sum + number == TARGET_NUMBER) {
                 System.out.println(concatStr(str, number));
             }
 
             return;
         }
 
-        printAllPossibilities(sum - number, NUMS[index], index + 1, concatStr(str, number));
-        printAllPossibilities(sum - number, -NUMS[index], index + 1, concatStr(str, number));
+        printAllPossibilities(sum + number, NUMS[index], index + 1, concatStr(str, number));
+        printAllPossibilities(sum + number, -NUMS[index], index + 1, concatStr(str, number));
         printAllPossibilities(sum, concatenatedNumber(number, index), index + 1, str);
     }
 
     public static void printAllPossibilities() {
-        printAllPossibilities(TARGET_NUMBER, NUMS[0], 1, "");
+        printAllPossibilities(0, NUMS[0], 1, "");
     }
 
     private static int concatenatedNumber(int number, int index) {
