@@ -30,8 +30,6 @@ public class BinaryTreeTest {
 
         tree.root.right = new BinaryTreeNode(6);
         tree.root.right.left = new BinaryTreeNode(5);
-        tree.root.right.right = new BinaryTreeNode(7);
-        tree.root.right.right = new BinaryTreeNode(9);
 
         assertTrue(tree.isBlanced(tree.root));
     }
