@@ -329,6 +329,7 @@ public class LinkedListTest {
 Write a program that outputs all possibilities to put the operators '+', '-', or nothing between the numbers 1,2,...,9 (in this order) such that the result is 100. For example 1 + 2 + 3 - 4 + 5 + 6 + 78 + 9 = 100.
 
 ### Solution to Question 4:
+I choose to this problem using a recursive pattern to make all the problem less complicated. I categorized into 3 cases: "+", "-", and "concatenate numbers", and created a function which recursively runs correspondingly to the cases. 
 
 #### MakingAHundred class
 ```java
@@ -379,4 +380,19 @@ public class MakingAHundredTest {
     }
 
 }
+```
+#### Test result
+```
+case: printAllPossibilities
+ + 1 + 2 + 3 - 4 + 5 + 6 + 78 + 9
+ + 1 + 2 + 34 - 5 + 67 - 8 + 9
+ + 1 + 23 - 4 + 5 + 6 + 78 - 9
+ + 1 + 23 - 4 + 56 + 7 + 8 + 9
+ + 12 + 3 + 4 + 5 - 6 - 7 + 89
+ + 12 + 3 - 4 + 5 + 67 + 8 + 9
+ + 12 - 3 - 4 + 5 - 6 + 7 + 89
+ + 123 + 4 - 5 + 67 - 89
+ + 123 + 45 - 67 + 8 - 9
+ + 123 - 4 - 5 - 6 - 7 + 8 - 9
+ + 123 - 45 - 67 + 89
 ```
