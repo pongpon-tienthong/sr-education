@@ -6,6 +6,19 @@ Implement a function to check if a binary tree is balanced. For the purposes of 
 
 #### BinaryTree and BinaryTreeNode class
 ```java
+public class BinaryTreeNode {
+
+    int data;
+    BinaryTreeNode left;
+    BinaryTreeNode right;
+
+    public BinaryTreeNode(int data) {
+        this.data = data;
+        this.left = null;
+        this.right = null;
+    }
+}
+
 public class BinaryTree {
 
     BinaryTreeNode root;
