@@ -210,6 +210,7 @@ public class MyQueueTest {
 Implement an algorithm to find the kth to last element of a singly linked list.
 
 ### Solution to Question 3:
+I created the method called "getNthNodeFromLast()" to solve this problem.
 
 #### LinkedList class
 ```java
@@ -323,6 +324,15 @@ public class LinkedListTest {
         assertEquals(1, linkedList.getNthNode(3));
     }
 }
+```
+
+#### Test result
+```java
+case: getNthNodeFromLast
+ assertEquals(1, linkedList.getNthNodeFromLast(0)); // correctly return the value (1) of position 0 from last
+ assertEquals(2, linkedList.getNthNodeFromLast(1)); // correctly return the value (2) of position 1 from last
+ assertEquals(3, linkedList.getNthNodeFromLast(2)); // correctly return the value (3) of position 2 from last
+ assertEquals(4, linkedList.getNthNodeFromLast(3)); // correctly return the value (4) of position 3 from last
 ```
 
 ### Question 4:
